@@ -3,9 +3,8 @@ from checkString.checkStr import *
 
 app = Flask(__name__)
 
-
-@app.route('/<path:input_str>',  methods=['POST', 'GET'])
 @app.route('/', methods=['POST', 'GET'])
+@app.route('/<path:input_str>',  methods=['POST', 'GET'])
 def string_checker(input_str=''):
     # create instance of the class CheckStr to use str_checker method
     str_checker = CheckStr()
