@@ -3,18 +3,15 @@ from checkString.checkStr import *
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST', 'GET'])
-@app.route('/<path:input_str>',  methods=['POST', 'GET'])
+
+@app.route('/test/', methods=[ 'GET'])
+@app.route('/test/<path:input_str>',  methods=['GET'])
 def string_checker(input_str=''):
     # create instance of the class CheckStr to use str_checker method
     str_checker = CheckStr()
-    if request.method == 'POST':
-        input_str = request.form['input_str']
+    if input_str:
+        pass
     else:
-        if input_str:
-            pass
-        else:
-            input_str = request.args.get('input_str')
-
+        input_str = request.args.get('input_str')
     return str(str_checker.check_alpha(input_str))
 
