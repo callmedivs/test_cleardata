@@ -35,9 +35,9 @@ Find more info on http://flask.pocoo.org/docs/1.0/installation/#
 Now using POSTMAN or your browser, you can test the application
 
 Ex:
-http://localhost:5000/?input_str=2343543  Expected o/p: False
-http://localhost:5000/3543abcdefghijklmnopqrstuvwxy   Expected o/p: False
+http://localhost:5000/test/?input_str=2343543  Expected o/p: False
+http://localhost:5000/test/3543abcdefghijklmnopqrstuvwxy   Expected o/p: False
 
-http://localhost:5000/3543abcdefghijklmnopqrstuvwxyz  Expected o/p: True 
+http://localhost:5000/test/3543abcdefghijklmnopqrstuvwxyz  Expected o/p: True 
 
 
